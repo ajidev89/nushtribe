@@ -58,11 +58,6 @@ export default {
   },
   mounted(){
         this.deliveryAddress = localStorage.getItem('Address') ? localStorage.getItem('Address') : '' ;
-  },
-  beforeUnmount(){
-    if (! this.deliveryAddress) {
-        alert("Alaye fill your address")
-    }
   }
 
 }

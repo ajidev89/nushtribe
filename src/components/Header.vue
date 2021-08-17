@@ -11,7 +11,9 @@
                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                     </svg>
-                   <div class="h-5 w-5 bg-red-500 rounded-full absolute -top-2 -right-2 text-gray-100" >1</div>
+                   <div class="h-5 w-5 bg-red-500 rounded-full absolute -top-2 -right-2 text-gray-100 flex items-center justify-center text-sm" >
+                       {{ cart.length }}
+                    </div>
                </button>
                <button class=" mx-8 md:hidden text-black p-2" @click="toogleNav" >
                    <svg xmlns="http://www.w3.org/2000/svg" class="h- w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,13 +36,17 @@ export default {
  },
  data(){
      return{
-         showNav: false
+         showNav: false,
+         cart: []
      }
  },
  methods:{
      toogleNav(){
          this.showNav = ! this.showNav    
-     }
+     },
+ },
+ mounted(){
+   this.cart = localStorage.getItem('nushtribe_cart') ? localStorage.getItem('nushtribe_cart') : [ ] ;
  }
 
 }

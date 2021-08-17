@@ -9,7 +9,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </div>
-      <div v-if="name == 'Resturants' ">
+      <div v-if="name == 'Resturants' || name == 'ResturantPage' ">
             <router-link :to="{ name: name }" >{{name}}</router-link>
       </div>
        <div v-if="name == 'Checkout' ">

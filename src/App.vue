@@ -15,8 +15,11 @@ export default {
   data(){
     return {
           address :'',
-          askDelievery: false
+          askDelievery: false,
     }
+  },
+  methods:{
+
   }
 }
 </script>
